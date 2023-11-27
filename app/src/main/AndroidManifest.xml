@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Sleeper"
         tools:targetApi="31">
         <activity
+            android:name=".MyReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyTitleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyBadgeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpalshActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
