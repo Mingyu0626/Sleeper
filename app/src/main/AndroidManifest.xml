@@ -12,6 +12,11 @@
         android:theme="@style/Theme.Sleeper"
         tools:targetApi="31">
         <activity
+            android:name=".RecordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_record"
+            android:theme="@style/Theme.Sleeper.NoActionBar" />
+        <activity
             android:name=".MyReportActivity"
             android:exported="false" />
         <activity
