@@ -5,6 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray700"
-    tools:context=".ResultActivity">
+    tools:context=".ResultActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/result_text"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/wakeCompleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/result_btn1"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+<!--    <Button-->
+<!--        android:layout_width="312dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:gravity="center"-->
+<!--        android:backgroundTint="@color/blue"-->
+<!--        android:fontFamily="@font/pretendardbold"-->
+<!--        android:text="기상 완료하기!"-->
+<!--        android:textSize="16sp"-->
+<!--        />-->
 
 </LinearLayout>
