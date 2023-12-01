@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray700"
-    tools:context=".MissionFragment"
+    tools:context=".fragment.MissionFragment"
     android:orientation="vertical">
 
 

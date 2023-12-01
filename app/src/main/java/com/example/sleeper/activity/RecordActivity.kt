@@ -1,7 +1,8 @@
-package com.example.sleeper
+package com.example.sleeper.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sleeper.R
 
 class RecordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

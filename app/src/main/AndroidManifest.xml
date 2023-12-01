@@ -12,34 +12,36 @@
         android:theme="@style/Theme.Sleeper"
         tools:targetApi="31">
         <activity
-            android:name=".RecordActivity"
+            android:name=".activity.RecordActivity"
             android:exported="false"
             android:label="@string/title_activity_record"
             android:theme="@style/Theme.Sleeper.NoActionBar" />
         <activity
-            android:name=".MyReportActivity"
+            android:name=".activity.MyReportActivity"
             android:exported="false" />
         <activity
-            android:name=".MyTitleActivity"
+            android:name=".activity.MyTitleActivity"
             android:exported="false" />
         <activity
-            android:name=".MyBadgeActivity"
+            android:name=".activity.MyBadgeActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultActivity"
+            android:name=".activity.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".SpalshActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
