@@ -12,6 +12,8 @@
     <string name="menu_home">home</string>
     <string name="menu_mission">mission</string>
     <string name="menu_mypage">mypage</string>
+    <string name="mission_weekly">weekly</string>
+    <string name="mission_monthly">monthly</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

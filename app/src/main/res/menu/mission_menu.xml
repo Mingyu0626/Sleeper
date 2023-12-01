@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/missionWeekly"
+        android:icon="@drawable/icon_tabbar_weekly"
+        android:enabled="true"
+        android:title="@string/mission_weekly" />
+
+    <item
+        android:id="@+id/missionMonthly"
+        android:icon="@drawable/icon_tabbar_monthly"
+        android:enabled="true"
+        android:title="@string/mission_monthly" />
+</menu>

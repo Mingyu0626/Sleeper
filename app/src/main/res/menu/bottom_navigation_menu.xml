@@ -17,5 +17,4 @@
         android:enabled="true"
         android:title="@string/menu_mypage" />
 
-
 </menu>
