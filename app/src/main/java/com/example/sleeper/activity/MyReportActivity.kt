@@ -1,5 +1,6 @@
 package com.example.sleeper.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sleeper.R
@@ -16,6 +17,11 @@ class MyReportActivity : AppCompatActivity() {
     }
 
     private fun initLayout() {
-        TODO("Not yet implemented")
+        binding.apply {
+            backToMainBtn.setOnClickListener {
+                val intent = Intent(this@MyReportActivity, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }

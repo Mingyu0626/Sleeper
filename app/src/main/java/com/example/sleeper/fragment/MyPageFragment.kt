@@ -6,14 +6,21 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.example.sleeper.R
 import com.example.sleeper.activity.MyBadgeActivity
 import com.example.sleeper.activity.MyTitleActivity
+import com.example.sleeper.adapter.MyReportDataAdapter
+import com.example.sleeper.data.SleepReportData
+import com.example.sleeper.data.TitleData
 import com.example.sleeper.databinding.FragmentMyPageBinding
 
 class MyPageFragment : Fragment() {
     lateinit var binding: FragmentMyPageBinding
+    val data:ArrayList<SleepReportData> = ArrayList()
+    lateinit var adapter: MyReportDataAdapter
+    lateinit var spinner: Spinner
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
