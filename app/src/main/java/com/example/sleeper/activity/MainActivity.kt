@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 }
             }
         )
-
         binding.bottomNav.setOnNavigationItemSelectedListener(this)
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

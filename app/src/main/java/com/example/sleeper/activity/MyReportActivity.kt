@@ -3,10 +3,19 @@ package com.example.sleeper.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.sleeper.R
+import com.example.sleeper.databinding.ActivityMainBinding
+import com.example.sleeper.databinding.ActivityMyReportBinding
 
 class MyReportActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMyReportBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_report)
+        binding = ActivityMyReportBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initLayout()
+    }
+
+    private fun initLayout() {
+        TODO("Not yet implemented")
     }
 }

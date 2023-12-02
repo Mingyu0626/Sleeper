@@ -12,50 +12,23 @@ import com.example.sleeper.adapter.MissionViewPagerAdapter
 import com.example.sleeper.databinding.FragmentMissionBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MissionFragment : Fragment(), BottomNavigationView.OnNavigationItemSelectedListener {
-    private var binding: FragmentMissionBinding?=null
+class MissionFragment : Fragment() {
+    lateinit var binding: FragmentMissionBinding
     lateinit var bnv: BottomNavigationView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mission, container, false)
+        binding = FragmentMissionBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        bnv = binding!!.missionBottomNav
-        binding!!.missionViewPager.adapter = MissionViewPagerAdapter(this)
-        binding!!.missionViewPager.registerOnPageChangeCallback(
-            object: ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    binding!!.missionBottomNav.menu.getItem(position).isChecked = true
-                }
-            }
-        )
-        binding!!.missionBottomNav.setOnNavigationItemSelectedListener(this)
     }
 
     private fun initFragment() {
-    }
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.missionWeekly -> {
-                // ViewPager의 현재 item에 첫 번째 화면을 대입
-                binding!!.missionViewPager.currentItem = 0
-                return true
-            }
-            R.id.missionMonthly -> {
-                // ViewPager의 현재 item에 두 번째 화면을 대입
-                binding!!.missionViewPager.currentItem = 1
-                return true
-            }
-            else -> {
-                return false
-            }
-        }
     }
 
 }
