@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Spinner
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.sleeper.adapter.MyReportDataAdapter
 import com.example.sleeper.adapter.MyTitleDataAdapter
 import com.example.sleeper.data.TitleData
@@ -19,6 +22,24 @@ class MyTitleActivity : AppCompatActivity() {
         binding = ActivityMyTitleBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initLayout()
+        initRecyclerView()
+        initSpinner()
+        initData()
+    }
+
+    private fun initData() {
+
+    }
+
+    private fun initSpinner() {
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerViewMyTitle.layoutManager = LinearLayoutManager(
+            this, LinearLayoutManager.VERTICAL, false
+        )
+        adapter = MyTitleDataAdapter(data)
+        binding.recyclerViewMyTitle.adapter = adapter
     }
 
     private fun initLayout() {

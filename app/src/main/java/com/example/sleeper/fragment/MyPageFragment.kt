@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sleeper.R
 import com.example.sleeper.activity.MyBadgeActivity
 import com.example.sleeper.activity.MyTitleActivity
 import com.example.sleeper.adapter.MyReportDataAdapter
+import com.example.sleeper.adapter.MyTitleDataAdapter
 import com.example.sleeper.data.SleepReportData
 import com.example.sleeper.data.TitleData
 import com.example.sleeper.databinding.FragmentMyPageBinding
@@ -20,7 +22,6 @@ class MyPageFragment : Fragment() {
     lateinit var binding: FragmentMyPageBinding
     val data:ArrayList<SleepReportData> = ArrayList()
     lateinit var adapter: MyReportDataAdapter
-    lateinit var spinner: Spinner
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +44,21 @@ class MyPageFragment : Fragment() {
                 startActivity(intent)
             }
         }
+
+        initRecyclerView()
+        initData()
+    }
+
+    private fun initData() {
+
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerViewMyReport.layoutManager = LinearLayoutManager(
+            requireContext(), LinearLayoutManager.VERTICAL, false
+        )
+        adapter = MyReportDataAdapter(data)
+        binding.recyclerViewMyReport.adapter = adapter
     }
 
 }
